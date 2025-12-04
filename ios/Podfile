@@ -1,0 +1,12 @@
+platform :ios, '14.0'
+
+flutter_application_path = '../'
+load File.join(flutter_application_path, '.flutter-plugins')
+load File.join(flutter_application_path, '.flutter-plugins-dependencies')
+
+target 'Runner' do
+  use_frameworks!
+  use_modular_headers!
+
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+end
